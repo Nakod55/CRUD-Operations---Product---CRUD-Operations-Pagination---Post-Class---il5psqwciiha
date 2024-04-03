@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const productSchema = new mongoose.Schema({
   // Implement the product schema fields here as
   // productName as String and price as Number
-  productName: { type: String, },
+  name: { type: String, },
   price: {type: Number}
 });
 
