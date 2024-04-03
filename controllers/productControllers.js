@@ -26,8 +26,8 @@ router.get('/products/:id', async (req, res) => {
   // 3. Handle success: Respond with a 200 status code and the product data
   // 4. Handle errors: Respond with appropriate error messages and status codes
   try{
-     const data= await Product.find({_id:req.params.id})
-    //  const data= await Product.findById(req.params.id);
+    //  const data= await Product.find({_id:req.params.id})
+     const data= await Product.findById(req.params.id);
      
      if(data){
          return res.status(200).send({message: "Product data", product: data});
@@ -57,7 +57,7 @@ router.patch('/products/:id', async (req, res) => {
     
      if(data)
      {
-         return res.status(200).send({message: "Product updated", updatedProduct: data})
+         return res.status(200).send({message: "Product updated", product: data})
      }
      else
      {
