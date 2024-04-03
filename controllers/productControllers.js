@@ -57,7 +57,7 @@ router.patch('/products/:id', async (req, res) => {
     
      if(data)
      {
-         return res.status(200).send({message: "Product updated", updatedProduct: data})
+         return res.status(200).send({message: "Product updated", product: data})
      }
      else
      {
